@@ -17,7 +17,7 @@
 #'
 #' @return A tibble of 6 columns with length equal the number of measurement the spectrolyzer performed
 #'
-#' @examples import("/Desktop/Raw_data/09210160.par")
+#' @examples import("https://raw.githubusercontent.com/BrianY-Wang/foo/main/Raw_data/09210160.par", "09210160")
 #'
 #' @export
 
@@ -30,8 +30,11 @@ import <- function(path, serialnumber) {
     x <- read_delim(path,show_col_types = FALSE)
 
   spec_tidy <- x  %>%
-    #follows sensor's default output format ordering and neglect system operation parameters
-    select (1,3,5,7,9)  %>%
+    select ("Date/Time",
+            "Turbid. [FTUeq]200.00-0.00_2",
+            "NO3-Neq [mg/l]10.00-0.00_2",
+            "TOCeq [mg/l]25.00-0.00_2",
+            "DOCeq [mg/l]12.00-0.00_2")  %>%
     mutate (SN = serialnumber, date = ymd_hms(`Date/Time`), 'Date/Time' = NULL)  %>%
     rename ('turbidity' = starts_with('Turbid.'),
             'nitrate' = starts_with('NO3-Neq'),

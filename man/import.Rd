@@ -25,6 +25,6 @@ given the serial number of the spectroylyzer you want to import.Ensure the data 
 the Raw_data folder
 }
 \examples{
-import("/Desktop/Raw_data/09210160.par")
+import("https://raw.githubusercontent.com/BrianY-Wang/foo/main/Raw_data/09210160.par", "09210160")
 
 }

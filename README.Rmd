@@ -42,8 +42,13 @@ plot(data$date,data$doc)
 ```
 
 ### Repository Contents
-- B1 folder containing source script (.Rmd), readme and knitted files 
-- Raw_data folder containing unprocessed data output by the spectrolyzers 
+- This README file (.Rmd and .md)
+- DESCRIPTION file containing scan.Tools package description
+- NAMESPACE file containing scan.Tools package dependent libraries
+- roxygen R/ folder containing function source script (.R)
+- roxygen man/ folder containing package function documentation
+- roxygen tests/ folder containing testing script for package function
+- Raw_data folder containing example unprocessed data output by the spectrolyzers 
 - ".gitignore"", ".DS_Store"" and ".Rproj files"" are github and Rproject related files 
 
 ## Author

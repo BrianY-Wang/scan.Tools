@@ -21,10 +21,11 @@
 #'
 #' @export
 #'
-# @import tidyverse read_delim
-# @import lubridate
-# @import here
-#
+#' @import readr
+#' @import tidyverse
+#' @import lubridate
+#' @importFrom dplyr %>%
+
 # @importFrom tidyverse read_delim select mutate rename
 # @importFrom lubridate ymd_hms
 
@@ -32,19 +33,19 @@
 
 import <- function(path, serialnumber) {
   # Import required packages
-   suppressPackageStartupMessages(library(tidyverse)) # for working with data-time objects
-   suppressPackageStartupMessages(library(lubridate)) # for working with data-time objects
+  # suppressPackageStartupMessages(library(tidyverse)) # for working with data-time objects
+  # suppressPackageStartupMessages(library(lubridate)) # for working with data-time objects
 
-    x <- read_delim(path,show_col_types = FALSE)
+    x <- readr::read_delim(path,show_col_types = FALSE)
 
   spec_tidy <- x  %>%
-    select ("Date/Time",
+    dplyr::select ("Date/Time",
             "Turbid. [FTUeq]200.00-0.00_2",
             "NO3-Neq [mg/l]10.00-0.00_2",
             "TOCeq [mg/l]25.00-0.00_2",
             "DOCeq [mg/l]12.00-0.00_2")  %>%
-    mutate (SN = serialnumber, date = ymd_hms(`Date/Time`), 'Date/Time' = NULL)  %>%
-    rename ('turbidity' = starts_with('Turbid.'),
+    dplyr::mutate (SN = serialnumber, date = lubridate::ymd_hms(`Date/Time`), 'Date/Time' = NULL)  %>%
+    dplyr::rename ('turbidity' = starts_with('Turbid.'),
             'nitrate' = starts_with('NO3-Neq'),
             'toc' = starts_with('TOCeq'),
             'doc' = starts_with('DOCeq'))

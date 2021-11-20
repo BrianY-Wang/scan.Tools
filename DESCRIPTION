@@ -5,7 +5,7 @@ Authors@R:
     person("Brian", "Wang", , "brian.wang@alumni.ubc.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4715-2613"))
 Description: An R Package that improves workflow with using s::can spectrolyzer's default analyte output data format
-License: `use_mit_license()`
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -14,6 +14,7 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
+    readr,
     tidyverse,
     lubridate,
-    here
+    dplyr

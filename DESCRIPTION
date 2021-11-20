@@ -1,12 +1,11 @@
 Package: scan.tools
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: UBC Ecohydro s::can Spectrolyzer Tools Repository
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Brian", "Wang", , "brian.wang@alumni.ubc.ca", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-4715-2613"))
+Description: An R Package that improves workflow with using s::can spectrolyzer's default analyte output data format
+License: `use_mit_license()`
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

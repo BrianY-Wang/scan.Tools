@@ -20,12 +20,20 @@
 #' @examples import("https://raw.githubusercontent.com/BrianY-Wang/foo/main/Raw_data/09210160.par", "09210160")
 #'
 #' @export
+#'
+# @import tidyverse read_delim
+# @import lubridate
+# @import here
+#
+# @importFrom tidyverse read_delim select mutate rename
+# @importFrom lubridate ymd_hms
+
+
 
 import <- function(path, serialnumber) {
   # Import required packages
-  library(tidyverse) # for working with data-time objects
-  library(lubridate) # for working with data-time objects
-  library(here)      # for importing via relative path
+   suppressPackageStartupMessages(library(tidyverse)) # for working with data-time objects
+   suppressPackageStartupMessages(library(lubridate)) # for working with data-time objects
 
     x <- read_delim(path,show_col_types = FALSE)
 

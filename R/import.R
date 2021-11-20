@@ -26,15 +26,7 @@
 #' @import lubridate
 #' @importFrom dplyr %>%
 
-# @importFrom tidyverse read_delim select mutate rename
-# @importFrom lubridate ymd_hms
-
-
-
 import <- function(path, serialnumber) {
-  # Import required packages
-  # suppressPackageStartupMessages(library(tidyverse)) # for working with data-time objects
-  # suppressPackageStartupMessages(library(lubridate)) # for working with data-time objects
 
     x <- readr::read_delim(path,show_col_types = FALSE)
 

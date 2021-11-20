@@ -1,4 +1,4 @@
-<h1 align="center"> STAT545B - Functions Repository </h1>
+<h1 align="center"> UBC Ecohydro s::can Spectrolyzer Tools Repository </h1>
 
 <p align="center"> An R Package that improves workflow with using s::can spectrolyzer's default analyte output data format </p>
 
@@ -22,13 +22,29 @@ This project utilized the following libraries, many thanks to the developers ðŸ™
 
 [testthat](https://cran.r-project.org/web/packages/testthat/index.html)
 
+### Downloading the scan.Tools R package in R
+Open RStudio and follow these steps:
+1. Download devtools if needed 
+```{r}
+install.packages("devtools")
+```
+2. Import devtools package onto workspace
+```{r}
+library("devtools")
+```
+3. Install github R package using the following code:
+```{r}
+devtools::install_github("BrianY-Wang/scan.Tools")
+```
+
 
 ### Cloning the repository to run R scripts and access raw data
-To download a copy of the repository onto your computer, follow these steps on a MAC:
+To clone the R package repository onto your computer, follow these steps:
 1. Open Terminal (Mac) or Console (Windows)
 2. Change directory (cd) to a path where you want the repository to be downloaded 
-3. Type in "git clone -https://github.com/stat545ubc-2021/mda-BrianY-Wang"
+3. Type in "git clone -https://github.com/BrianY-Wang/scan.Tools"
 4. The repository should be downloaded and each script can now be opened locally with R (Version 1.4.1717 or above)
+
 
 ### Repository Contents
 - B1 folder containing source script (.Rmd), readme and knitted files 
